@@ -20,6 +20,7 @@ export const Header = (props: HeaderProps) => {
                 </ul>
                 <div>
 
+
                 </div>
             </nav>
         </style.Header>
