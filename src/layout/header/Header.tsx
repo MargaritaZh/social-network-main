@@ -9,17 +9,19 @@ type HeaderProps = {};
 export const Header = (props: HeaderProps) => {
     return (
         <style.Header>
-            <img src={logo} alt={"logotype"}/>
-            <nav>
-                <ul>
-                    <li><a href={"#"}>img</a></li>
-                    <li><a href={"#"}>img</a></li>
-                    <li><a href={"#"}>img</a></li>
-                </ul>
-                <div>
-                    <UserElement/>
-                </div>
-            </nav>
+
+                <img src={logo} alt={"logotype"}/>
+                <nav>
+                    <ul>
+                        <li><a href={"#"}>img</a></li>
+                        <li><a href={"#"}>img</a></li>
+                        <li><a href={"#"}>img</a></li>
+                    </ul>
+                    <div>
+                        <UserElement/>
+                    </div>
+                </nav>
+
         </style.Header>
     );
 };

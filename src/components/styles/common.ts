@@ -24,14 +24,16 @@ type FlexWrapperProps = {
     justify?: string
     align?: string
     wrap?:string
+    gap?:string
 }
 
-export const flexWrapper = ({direction, justify, align,wrap}: FlexWrapperProps) => `
+export const flexWrapper = ({direction, justify, align,wrap, gap}: FlexWrapperProps) => `
 display:flex;
 flex-direction:${direction || "row"};
 justify-content:${justify || "space-between"};
 align-items:${align || "center"};
 flex-wrap:${wrap||"no-wrap"};
+gap:${gap||"0"};
 `
 
 

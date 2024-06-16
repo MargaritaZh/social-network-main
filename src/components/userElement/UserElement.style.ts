@@ -2,7 +2,11 @@ import styled from "styled-components";
 import {flexWrapper, font} from "../styles/common";
 import {theme} from "../styles/Theme";
 
-const UserBlock=styled.div``
+const UserBlock=styled.div`
+    ${flexWrapper({align: "center", justify: "start", gap: "12px"})};
+    
+
+`
 
 const Avatar=styled.img`
     width: 54px;
@@ -12,23 +16,16 @@ const Avatar=styled.img`
 `
 
 const TextInfo=styled.p`
-    ${flexWrapper({})}
+    ${flexWrapper({direction:"column",align:"start",gap:"4px"})};
 `
 
 const Name=styled.span`
-${font({Fmin:theme.fontSize.main, Fmax:theme.fontSize.main, weight:600})}
+${font({Fmin:theme.fontSize.main, Fmax:theme.fontSize.main, weight:600})};
 `
 
 const Small=styled.span`
-    ${font({Fmin:theme.fontSize.small, Fmax:theme.fontSize.main, weight:200})}
+    ${font({Fmin:theme.fontSize.small, Fmax:theme.fontSize.main, weight:200})};
 `
-
-
-
-
-
-
-
 
 export const style={
     UserBlock,
