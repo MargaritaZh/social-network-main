@@ -1,31 +1,31 @@
 import * as React from 'react';
 
 import logo from "../../assets/logo.svg"
-import {style} from "./Header.style"
+import {Style} from "./Header.style"
 import {UserElement} from "../../components/userElement/UserElement";
 import {SvgIcon} from "../../components/SvgIcon";
-import {DropDownMenu} from "../../components/dropDownMenu/DropDownMenu";
 import {dropDownMenuItems} from "../../data/data";
+import {DropDownMenu} from "../../components/dropDownMenu/DropDownMenu";
 
 
 type HeaderProps = {};
 export const Header = (props: HeaderProps) => {
     return (
-        <style.Header>
+        <Style.Header>
             <img src={logo} alt={"logotype"}/>
-            <nav>
-                <ul>
-                    //todo navlink
+            <Style.Navigation>
+                <Style.Menu>
+                    {/*todo navlink*/}
                     <li><a href={"#"}><SvgIcon iconId={"newspaper"}/></a></li>
                     <li><a href={"#"}><SvgIcon iconId={"message"}/></a></li>
                     <li><a href={"#"}><SvgIcon iconId={"notification"}/></a></li>
-                </ul>
-                <div>
+                </Style.Menu>
+                <Style.UserMenu>
                     <UserElement/>
                     <DropDownMenu menuItems={dropDownMenuItems}/>
-                </div>
-            </nav>
-        </style.Header>
+                </Style.UserMenu>
+            </Style.Navigation>
+        </Style.Header>
     );
 };
 

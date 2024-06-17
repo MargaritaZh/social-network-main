@@ -1,9 +1,27 @@
 import styled from "styled-components";
+import {flexWrapper} from "../../components/styles/common";
 
 const Header=styled.header`
-    
+    ${flexWrapper({gap:"20px"})}
 `
 
-export const style={
+const Navigation=styled.nav`
+    ${flexWrapper({gap:"20px"})}
+`
+
+const Menu=styled.ul`
+    ${flexWrapper({gap:"20px"})}
+`
+
+const UserMenu=styled.div`
+    ${flexWrapper({gap:"20px"})}
+`
+
+
+export const Style={
     Header,
+    Navigation,
+    Menu,
+    UserMenu,
+
 }

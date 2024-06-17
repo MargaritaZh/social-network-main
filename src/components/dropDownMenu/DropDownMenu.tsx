@@ -2,6 +2,7 @@ import * as React from 'react';
 import {SvgIcon} from "../SvgIcon";
 import {useState} from "react";
 import {dropDownLinkType} from "../../data/types";
+import { Style } from './DropDownMenu.style';
 
 
 export type DropDownMenuProps = {
@@ -18,19 +19,20 @@ export const DropDownMenu = ({menuItems}: DropDownMenuProps) => {
     }
 
     return (
-        <>
+        <Style.DropDownMenu>
             <button onClick={onClickHandler}>
                 <SvgIcon iconId={"arrowDown"}/>
             </button>
-            {open && <ul>
+            {open && <Style.DropMenu>
                 {menuItems.map((item, index) => {
                     return (
-                        <li key={index}>
-                            <a href={item.href}>{item.title}</a> //todo navlink
-                        </li>
+                        <Style.MenuItem key={index}>
+                            <a href={item.href}>{item.title}</a>
+                            {/*todo navlink*/}
+                        </Style.MenuItem>
                     )
                 })}
-            </ul>}
-        </>
+            </Style.DropMenu>}
+        </Style.DropDownMenu>
     );
 };
