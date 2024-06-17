@@ -13,6 +13,7 @@ export const SvgIcon = ({iconId, width, height, viewBox}: SvgIconProps) => {
              height={height || "24"}
              viewBox={viewBox || "0 0 24 24"}>
             <use xlinkHref={`${sprite}#${iconId}`}></use>
+        {/* ./../assets/icons-sprite.svg#newpaper   */}
         </svg>
     );
 };
