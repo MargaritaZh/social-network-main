@@ -1,4 +1,5 @@
-import {dropDownLinkType} from "./types";
+import {dropDownLinkType, PersonsDialogType} from "./types";
+import {v1} from "uuid";
 
 export const dropDownMenuItems: Array<dropDownLinkType> = [
     {
@@ -23,3 +24,32 @@ export const dropDownMenuItems: Array<dropDownLinkType> = [
     },
 ]
 
+export const personsForDialogs: Array<PersonsDialogType> = [
+    {
+        id: v1(),
+        name: "Феня Рогожин",
+        smallText: "Поминутно жалуются, что у нас нет людей практических; что  политических людей.",
+        isOnline: true,
+    },
+    {
+        id: v1(),
+        name: "Аглая Епанчина",
+        smallText: "Поминутно жалуются, что у нас нет людей практических; что  политических людей.",
+        isOnline: false,
+    },
+    {
+        id: v1(),
+        name: "Ганя Иволгин",
+        smallText: "Поминутно жалуются, что у нас нет людей практических; что  политических людей.",
+        isOnline: true,
+    },
+    {
+        id: v1(),
+        name: "Лев Мышкин",
+        smallText: "Поминутно жалуются, что у нас нет людей практических; что  политических людей.",
+        isOnline: false,
+    },
+
+
+
+]

@@ -6,6 +6,7 @@ import {UserElement} from "../../components/userElement/UserElement";
 import {SvgIcon} from "../../components/SvgIcon";
 import {dropDownMenuItems} from "../../data/data";
 import {DropDownMenu} from "../../components/dropDownMenu/DropDownMenu";
+import {v1} from "uuid";
 
 
 type HeaderProps = {};
@@ -24,7 +25,7 @@ export const Header = (props: HeaderProps) => {
                     <li><a href={"#"}><SvgIcon iconId={"notification"}/></a></li>
                 </Style.Menu>
                 <Style.UserMenu>
-                    <UserElement name={"Настя Барашкова"} smallText={"@id234567890"} isOnline/>
+                    <UserElement id={v1()} name={"Настя Барашкова"} smallText={"@id234567890"} isOnline/>
                     <DropDownMenu menuItems={dropDownMenuItems}/>
                 </Style.UserMenu>
             </Style.Navigation>

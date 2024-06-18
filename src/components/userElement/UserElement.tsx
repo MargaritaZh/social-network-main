@@ -1,17 +1,11 @@
 import avatar from "./../../assets/avatars/Tiana-photo.webp"
 import {Style} from "./UserElement.style";
 import {NotificationDot} from "../NotificationDot";
+import {PersonsDialogType} from "../../data/types";
 
-type UserElementProps = {
-    avatar?: string
-    name: string
-    smallText: string
-    isOnline?: boolean
-}
 
 // todo avatar
-
-export const UserElement = ({name, smallText, isOnline}: UserElementProps) => {
+export const UserElement = ({name, smallText, isOnline}: PersonsDialogType) => {
     return (
         <Style.UserBlock>
             <Style.AvatarWrapper>
