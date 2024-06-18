@@ -1,15 +1,28 @@
 import avatar from "./../../assets/avatars/Tiana-photo.webp"
-import { style } from "./UserElement.style";
+import {Style} from "./UserElement.style";
+import {NotificationDot} from "../NotificationDot";
 
-export const UserElement = () => {
+type UserElementProps = {
+    avatar?: string
+    name: string
+    smallText: string
+    isOnline?: boolean
+}
+
+// todo avatar
+
+export const UserElement = ({name, smallText, isOnline}: UserElementProps) => {
     return (
-        <style.UserBlock>
-            <style.Avatar src={avatar} alt={'User\'s-photo'}/>
-            <style.TextInfo>
-                <style.Name>Настя Барашкова</style.Name>
-                <style.Small>@id33323232</style.Small>
-            </style.TextInfo>
-        </style.UserBlock>
+        <Style.UserBlock>
+            <Style.AvatarWrapper>
+                <Style.Avatar src={avatar} alt={'User\'s-photo'}/>
+                {isOnline && <NotificationDot/>}
+            </Style.AvatarWrapper>
+            <Style.TextInfo>
+                <Style.Name>{name}</Style.Name>
+                <Style.Small>{smallText}</Style.Small>
+            </Style.TextInfo>
+        </Style.UserBlock>
     );
 };
 

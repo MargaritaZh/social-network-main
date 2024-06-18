@@ -9,6 +9,9 @@ import {DropDownMenu} from "../../components/dropDownMenu/DropDownMenu";
 
 
 type HeaderProps = {};
+
+
+
 export const Header = (props: HeaderProps) => {
     return (
         <Style.Header>
@@ -21,7 +24,7 @@ export const Header = (props: HeaderProps) => {
                     <li><a href={"#"}><SvgIcon iconId={"notification"}/></a></li>
                 </Style.Menu>
                 <Style.UserMenu>
-                    <UserElement/>
+                    <UserElement name={"Настя Барашкова"} smallText={"@id234567890"} isOnline/>
                     <DropDownMenu menuItems={dropDownMenuItems}/>
                 </Style.UserMenu>
             </Style.Navigation>
