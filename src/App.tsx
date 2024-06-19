@@ -3,7 +3,8 @@ import './App.css';
 import {Header} from "./layout/header/Header";
 import {SideDialogs} from "./layout/dialogs/sideDialogs/SideDialogs";
 import {personsForDialogs} from "./data/data";
-
+import {Dialog} from "./layout/dialogs/dialog/Dialog";
+import {StyleLayout} from "./layout/layoutStyles"
 
 function App() {
 
@@ -11,11 +12,10 @@ function App() {
     return (
         <div className={"container"}>
             <Header/>
-            <main>
+            <StyleLayout.Main>
                 <SideDialogs persons={personsForDialogs}/>
-            </main>
-
-
+                <Dialog/>
+            </StyleLayout.Main>
         </div>
     );
 }
