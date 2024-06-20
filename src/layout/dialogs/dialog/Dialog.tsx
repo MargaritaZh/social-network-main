@@ -32,7 +32,7 @@ const messages: Array<messageType> = [
     },
     {
         id: v1(),
-        authorId: v1(),
+        authorId: personsForDialogs[0].id,
         text: "При том, что в улье поддерживается температура 35 градусов Цельсия, а состав и свойства воска также постоянны, величина прогиба зависит только от толщины стенки.",
         isLiked: true,
         time: Date(),
@@ -46,7 +46,7 @@ export const Dialog = () => {
 
     const user = personsForDialogs[0];
 
-    const myId = "jhkgjhkgj"
+    const myId = personsForDialogs[0].id
 
 
     return (
@@ -54,15 +54,22 @@ export const Dialog = () => {
             <Style.DialogHeader>
                 <UserElement id={user.id} name={user.name} smallText={user.smallText}/>
             </Style.DialogHeader>
-            {messages.map(message => {
+                {messages.map(message => {
 
-                const fromMe =
-                    myId === message.authorId
+                    const fromMe =
+                        myId === message.authorId
 
-                return (
-                    <Message key={message.id} avatar={avatar} text={message.text} date={message.time} fromMe={fromMe}/>
-                )
-            })}
+                    return (
+                        <Message key={message.id}
+                                 avatar={avatar}
+                                 text={message.text}
+                                 date={message.time}
+                                 like={message.isLiked}
+                                 fromMe={fromMe}
+                        />
+                    )
+                })}
+
         </StyleLayout.MainBlock>
     );
 };

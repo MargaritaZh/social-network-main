@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import {theme} from "../components/styles/Theme";
+import {flexWrapper} from "../components/styles/common";
 
 
 const Main = styled.main`
@@ -16,6 +17,8 @@ const SideBlock = styled.div`
 `
 
 const MainBlock = styled.div`
+    ${flexWrapper({direction: "column", justify: "start", align: "start"})}
+
     padding: 20px;
     background-color: ${theme.colors.bgBlock};
     border-radius: 10px;
